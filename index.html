@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPOS LAB - AI-Powered Restaurant POS System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+<header>
+    <div class="inner">
+        <div class="header-home">
+            <a href="#">AIPOS LAB</a>
+        </div>
+        <div class="header-util">
+            <nav>
+                <a href="#solutions">Solutions</a>
+                <a href="#flow">How It Works</a>
+                <a href="#about">About</a>
+                <a href="#case-studies">Case Studies</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+            <button class="header-demo">
+                Request Demo
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="visual">
+    <!--    <video autoplay muted loop>-->
+    <!--        <source src="https://example.com/restaurant-video.mp4" type="video/mp4">-->
+    <!--    </video>-->
+    <div class="inner">
+        <h1 data-aos="fade-up">
+            MANAGE LESS with<br/><span>Carte POS</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            We Automate Management So Owners Can Focus On Hospitality.
+        </p>
+
+        <ul class="visual-benefits">
+            <li data-aos="fade-up" data-aos-delay="200">
+                <h3><span id="revenue-counter">0</span>%</h3>
+                <span>Increase in monthly net profit</span>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="300">
+                <h3><span id="time-counter">0</span>%</h3>
+                <span>Faster order processing</span>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="400">
+                <h3><span id="cost-counter">0</span>%</h3>
+                <span>Reduction in food waste</span>
+            </li>
+        </ul>
+
+        <div class="visual-example">
+            <div class="visual-img">
+                <img src="/img/visual-pos.png" alt="capture">
+            </div>
+            <button class="visual-demo">
+                <span>See Your ROI<br/>in a 30-Minute Demo</span>
+                <img src="/img/visual-arr.png" alt="arrow">
+            </button>
+        </div>
+    </div>
+    <div class="visual-mask" style="transform: scale(1, 0)"></div>
+</section>
+
+<!-- Solutions Section -->
+<section id="solutions" class="commonSection">
+    <div class="inner">
+        <div class="solutions-header">
+            <h2 data-aos="fade-right">
+                One Platform for<br/>
+                Optimal Table Turnover,<br/>
+                Labor Savings,<br/>
+                and Eliminating System Complexity
+            </h2>
+            <p data-aos="fade-right" data-aos-delay="100">
+                An all-in-one system that unifies POS, payments, inventory, payroll, tips, HR—lowering labor cost,
+                optimizing table turnover, and reducing compliance risk.
+            </p>
+        </div>
+
+        <ul class="solutions-contents">
+            <!-- Card 1: Turnover -->
+            <li data-aos="fade-left" data-aos-delay="150">
+                <h3>Increase Restaurant Seat Turnover Rate</h3>
+                <p>
+                    AI-guided seating, ordering, and checkout speed up service. Serve more guests with the same space
+                    and fewer labor hours.
+                </p>
+            </li>
+
+            <!-- Card 2: Unified Operations -->
+            <li data-aos="fade-left" data-aos-delay="200">
+                <h3>Unified Operations</h3>
+                <p>
+                    POS, delivery, reservations, payments, and inventory in one place. Real-time inventory updates and
+                    smart order routing reduce fees and back-of-house work.
+                </p>
+            </li>
+
+            <!-- Card 3: Workforce, Tips & Payroll -->
+            <li data-aos="fade-left" data-aos-delay="250">
+                <h3>Workforce, Tips & Payroll</h3>
+                <p>
+                    Time tracking, tip pooling/allocations, overtime alerts, and payroll exports in one workflow—cut
+                    admin hours and costly compliance risk.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="software" class="commonSection">
+    <div class="section-header">
+        <h2 data-aos="fade-up">
+            Key Features of Our Software
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="100">
+            5 Keys to Restaurant Success
+        </p>
+    </div>
+
+    <ul class="software-contents">
+        <li data-aos="fade-up" data-aos-delay="200">
+            <div class="software-icon"><i style="background-position-x: 0;"></i></div>
+            <h3>Reliable</h3>
+            <p>Stable cloud server and ultra-fast payment processing</p>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="300">
+            <div class="software-icon"><i style="background-position-x: -1em;"></i></div>
+            <h3>Convenient</h3>
+            <p>Intuitive admin dashboard to manage your business from anywhere</p>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="400">
+            <div class="software-icon"><i style="background-position-x: -2em;"></i></div>
+            <h3>Data-Driven</h3>
+            <p>Comprehensive analysis of sales and local market trends to maximize
+                profitability</p>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="500">
+            <div class="software-icon"><i style="background-position-x: -3em;"></i></div>
+            <h3>Predictive AI</h3>
+            <p>AI analyzes past data to forecast demand and help you preparing
+                inventories and promotions</p>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="600">
+            <div class="software-icon"><i style="background-position-x: -4em;"></i></div>
+            <h3>Efficient</h3>
+            <p>Minimize repetitive staff tasks and automate workflow</p>
+        </li>
+    </ul>
+</section>
+
+<!-- Flow Section -->
+<section id="flow" class="commonSection">
+    <div class="inner">
+        <div class="section-header">
+            <h2 data-aos="fade-up">
+                The Carte POS Flow
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                How Data Becomes Profit for Your Restaurant
+            </p>
+        </div>
+
+        <div class="flow-contents">
+            <div class="flow-item" data-aos="fade-right">
+                <div class="flow-item-text">
+                    <h3>Order Flow | Front of House</h3>
+                    <p>This is the first point of contact with your customer and where
+                        all data begins. An intuitive UI and fast order processing enhance customer satisfaction and
+                        ensure every piece of customer experience data is accurately captured.</p>
+                    <ul>
+                        <li>Intuitive Menu UI</li>
+                        <li>Tableside Ordering & Payment</li>
+                        <li>Integrated Dine-in, Takeout & Delivery Management</li>
+                        <li>Fast Order Entry & Error Minimization</li>
+                    </ul>
+                </div>
+                <div class="flow-item-img" style="background-color: #D1E6D1">
+                    <img src="/img/flow-1.png" alt="image">
+                </div>
+            </div>
+
+            <div class="flow-item" data-aos="fade-left">
+                <div class="flow-item-text">
+                    <h3>Ops View | Back of House</h3>
+                    <p>Data captured from the Front of House is instantly relayed to the
+                        kitchen and back office to automate operations. This ensures stability by preventing missed
+                        orders, optimizing inventory, and enabling efficient staff management.</p>
+                    <ul>
+                        <li>Real-time Order Sync (KDS/Kitchen Display System)</li>
+                        <li>AI-Powered Inventory Tracking & Optimized Ordering</li>
+                        <li>Staff Permissions & Schedule Management</li>
+                        <li>Visual Floor Plan & Table Management</li>
+                    </ul>
+                </div>
+                <div class="flow-item-img" style="background-color: #EDECFE">
+                    <img src="/img/flow-2.png" alt="image">
+                </div>
+            </div>
+
+            <div class="flow-item" data-aos="fade-right">
+                <div class="flow-item-text">
+                    <h3>Business Wise | Insight Engine</h3>
+                    <p>All operational data converges into the 'Insight Engine.' Here,
+                        the restaurant owner transforms from an operator into a strategist who makes decisions based
+                        on data. Carte POS is the business brain that grows your restaurant.</p>
+                    <ul>
+                        <li>Real-time Sales Dashboard & Reports</li>
+                        <li>Statistical Analysis by Menu/Time of Day</li>
+                        <li>AI-Powered Recommendations (New Menus, Promotions, Price Optimization)</li>
+                        <li>Full Compliance with Global Privacy Regulations (e.g., GDPR)</li>
+                    </ul>
+                </div>
+                <div class="flow-item-img" style="background-color: #FFE1E1">
+                    <img src="/img/flow-3.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="commonSection">
+    <div class="inner">
+        <div class="about-contents">
+            <div class="about-content-text">
+                <div class="section-header">
+                    <h2 data-aos="fade-right">
+                        About Aipos Lab
+                    </h2>
+                    <p data-aos="fade-right" data-aos-delay="100">
+                        Your Trusted Technology Partner
+                    </p>
+                </div>
+                <ul data-aos="fade-right">
+                    <li>
+                        <h3>Our Mission</h3>
+                        <p class="text-gray-600 mb-6">AIPOS LAB was founded to help restaurant owners escape the
+                            complexities of
+                            management and focus on the essence of service: providing great food and warm hospitality.
+                            We
+                            use AI
+                            to automate operations and empower every restaurant to make smart, data-driven
+                            decisions.</p>
+                    </li>
+                    <li>
+                        <h3>Leadership & The Lab</h3>
+                        <p class="text-gray-600">Our leadership team brings decades of experience, including a CEO with
+                            30
+                            years
+                            in IT and a CTO with 20 years as a SaaS architect.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about-content-tech" data-aos="fade-left">
+                <h3>Proof of Technology</h3>
+                <ul>
+                    <li class="green">
+                        <i class="about-icon" style="background-position-x: -4em;"></i>
+                        <p>Patent for AI Demand Forecasting Algorithm</p>
+                    </li>
+                    <li class="blue">
+                        <i class="about-icon" style="background-position-x: -5em;"></i>
+                        <p>Copyright for Cloud-Based POS System</p>
+                    </li>
+                    <li class="blue">
+                        <i class="about-icon" style="background-position-x: -6em;"></i>
+                        <p>Information Security Management System</p>
+                    </li>
+                    <li class="green">
+                        <i class="about-icon" style="background-position-x: -7em;"></i>
+                        <p>PCI DSS Data Security Standard Compliance</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Studies Section -->
+<section id="case-studies" class="commonSection">
+    <div class="inner">
+        <div class="section-header">
+            <h2 data-aos="fade-up">
+                Customer Success Stories
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Real Results from Real Restaurants
+            </p>
+        </div>
+
+        <div class="case-studies-contents" data-aos="fade-up">
+            <div class="case-studies-img">
+                <img src="/img/stories-img.png" alt="Restaurant Case Study">
+            </div>
+            <div class="case-studies-text">
+                <h3>"15% Increase in Monthly Net Profit After Adopting AI"</h3>
+
+                <ul class="case-studies-top">
+                    <li>
+                        <h4 style="color: var(--primary)">The Challenge</h4>
+                        <p>Due to unpredictable customer demand, we had to discard a significant
+                            amount of ingredients each month and wasted time manually processing orders from numerous
+                            delivery apps.</p>
+                    </li>
+
+                    <li>
+                        <h4 style="color: #2AC9A4">The Solution</h4>
+                        <p>After implementing Carte POS, the 'AI Demand Forecast' feature allowed
+                            us to optimize our ordering based on accurate predictions for weekends and weather. All
+                            delivery app orders were integrated into the POS, eliminating chaos in the kitchen.</p>
+                    </li>
+                </ul>
+
+                <div class="case-studies-bottom">
+                    <h4>The Results</h4>
+                    <ul>
+                        <li>
+                            <strong>20%</strong>
+                            <p>Reduction in<br/>food waste</p>
+                        </li>
+                        <li>
+                            <strong>30%</strong>
+                            <p>Faster<br/>order processing</p>
+                        </li>
+                        <li>
+                            <strong>15%</strong>
+                            <p>Increase in<br/>monthly net profit</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="commonSection">
+    <div class="inner">
+        <div class="section-header">
+            <h2 data-aos="fade-up">
+                Pricing & Getting Started
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                A Simple, Powerful Business Model
+            </p>
+        </div>
+
+        <ul class="pricing-contents">
+            <li data-aos="fade-right">
+                <div>
+                    <strong>SaaS Subscription</strong>
+                    <p>Access all features for a flat, reasonable fee</p>
+                </div>
+                <div class="price">
+                    <b>$250</b> / month
+                </div>
+            </li>
+
+            <li data-aos="fade-right" data-aos-delay="100">
+                <div>
+                    <strong>Payment Processing Fee</strong>
+                    <p>A competitive rate that grows when our clients succeed</p>
+                </div>
+                <div class="price">
+                    <b>2.5%</b> + 10¢
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="request" class="commonSection">
+    <div class="inner">
+        <div class="section-header">
+            <h3>Get AI-Powered Restaurant Intelligence</h3>
+        </div>
+
+        <form id="request-form">
+            <div class="w-50">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="input">
+            </div>
+            <div class="w-50">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="input">
+            </div>
+
+            <div>
+                <label for="restaurant">Restaurant Name</label>
+                <input type="text" id="restaurant" class="input">
+            </div>
+
+            <div>
+                <label for="message">Tell Us About Your Needs</label>
+                <textarea id="message" rows="4" class="input"></textarea>
+            </div>
+
+            <button type="submit" class="submit">
+                Request Free Hardware & Demo
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="inner">
+        <div class="footer-info">
+            <div>
+                <h4>AIPOS LAB</h4>
+                <p>We handle the management, so restaurant owners can focus on what matters most:
+                    hospitality.</p>
+            </div>
+
+            <div>
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="#">Instant Order Assistant</a></li>
+                    <li><a href="#">Smart Payment Integration</a></li>
+                    <li><a href="#">Menu & Inventory Sync</a></li>
+                    <li><a href="#">Customer Engagement Tools</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Connect</h4>
+                <div class="connect-icon">
+                    <a href="#" target="_blank">
+                        <i style="background-position-x: 0;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i style="background-position-x: -1em;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i style="background-position-x: -2em;"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i style="background-position-x: -3em;"></i>
+                    </a>
+                </div>
+
+                <div>
+                    <p>Email: info@aiposlab.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-botom">
+            <p class="footer-copyright">© 2023 AIPOS LAB. All rights reserved.</p>
+            <div class="footer-policy">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+
+    // Animate counters
+    const animateCounters = (id, max) => {
+        const counterElem = document.getElementById(id);
+        const counterMax = max;
+        let counter = 0;
+        const setCount = setInterval(() => {
+            counter++
+            counterElem.innerText = counter;
+            if (counter >= counterMax) {
+                clearInterval(setCount)
+            }
+        }, 50)
+    };
+
+    setTimeout(() => {
+        animateCounters('revenue-counter', 15);
+        animateCounters('time-counter', 30);
+        animateCounters('cost-counter', 20);
+    }, 500)
+
+    const visual = document.querySelector('.visual-example');
+    const visualMask = document.querySelector('.visual-mask');
+
+    function findPosition(entry) {
+        let pos = window.innerHeight - entry.target.getClientRects()[0].bottom + 200
+        let end = entry.target.clientHeight / 2
+        if (end > pos && pos > 0) {
+            let scale = (pos / end).toFixed(2)
+            visualMask.style.transform = `scale(1, ${scale})`;
+        }
+    }
+
+    let visualHandler = null;
+    const visualAnimate = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                visualHandler = () => findPosition(entry);
+                window.addEventListener('scroll', visualHandler);
+            } else {
+                window.removeEventListener('scroll', visualHandler);
+                visualHandler = null;
+            }
+        });
+    });
+
+    visualAnimate.observe(visual);
+</script>
+</body>
+</html>
