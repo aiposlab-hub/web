@@ -403,14 +403,36 @@
                 <input type="email" id="email" class="input">
             </div>
 
-            <div>
+            <div class="w-50">
                 <label for="restaurant">Restaurant Name</label>
                 <input type="text" id="restaurant" class="input">
+            </div>
+            <div class="w-50">
+                <label for="phone">Mobile Phone Number <span class="optional">(optional)</span></label>
+                <input type="tel" id="phone" class="input" autocomplete="tel">
             </div>
 
             <div>
                 <label for="message">Tell Us About Your Needs</label>
                 <textarea id="message" rows="4" class="input"></textarea>
+            </div>
+
+            <div class="consent-group">
+                <div class="consent">
+                    <input type="checkbox" id="sms-consent">
+                    <label for="sms-consent">
+                        I agree to receive SMS text messages from AIPOS LAB INC. about my account and service
+                        updates at the mobile number provided. Message frequency varies. Message and data rates
+                        may apply. Reply HELP for help, STOP to unsubscribe. Consent is not a condition of purchase.
+                    </label>
+                </div>
+                <div class="consent">
+                    <input type="checkbox" id="terms-consent">
+                    <label for="terms-consent">
+                        I have read and agree to the <a href="terms.html">Terms of Service</a> and
+                        <a href="privacy.html">Privacy Policy</a>.
+                    </label>
+                </div>
             </div>
 
             <button type="submit" class="submit">
@@ -474,12 +496,17 @@
             </div>
         </div>
 
+        <div class="footer-legal">
+            <p><strong>AIPOS LAB INC.</strong></p>
+            <p>327D &ndash; 4501 North Road, Burnaby, BC V3N 4R7, Canada</p>
+        </div>
+
         <div class="footer-botom">
-            <p class="footer-copyright">© 2023 AIPOS LAB. All rights reserved.</p>
+            <p class="footer-copyright">© 2026 AIPOS LAB INC. All rights reserved.</p>
             <div class="footer-policy">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookies</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html#cookies">Cookies</a>
             </div>
         </div>
     </div>

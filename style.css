@@ -869,3 +869,127 @@ footer {
         min-width: 100%;
     }
 }
+/* ------------------------------------------------------------------
+   SMS consent, legal footer and policy pages
+   ------------------------------------------------------------------ */
+
+#request-form .optional {
+    font-weight: 400;
+    font-size: .9em;
+    color: #8a8a8a;
+}
+
+#request-form .consent-group {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+    margin-top: .5rem;
+}
+
+#request-form .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+#request-form .consent input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: .2rem;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+#request-form .consent label {
+    font-size: .95rem;
+    line-height: 1.6em;
+    color: #4a4a4a;
+    cursor: pointer;
+}
+
+#request-form .consent a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.footer-info {
+    margin-bottom: 3rem;
+}
+
+.footer-legal {
+    padding-top: 2rem;
+    margin-bottom: 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    font-size: .9rem;
+    line-height: 1.75em;
+    color: rgba(255, 255, 255, .75);
+}
+
+.footer-legal strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* Policy pages -------------------------------------------------- */
+
+.legal {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 9rem 1.5rem 6rem;
+}
+
+.legal h1 {
+    font-size: 2.25rem;
+    margin-bottom: .75rem;
+}
+
+.legal .updated {
+    font-size: .95rem;
+    color: #6b6b6b;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.legal h2 {
+    font-size: 1.3rem;
+    margin: 2.75rem 0 .85rem;
+}
+
+.legal p,
+.legal li {
+    font-size: 1rem;
+    line-height: 1.8em;
+    color: #333;
+}
+
+.legal p + p {
+    margin-top: 1rem;
+}
+
+.legal ul {
+    margin: 1rem 0 0 1.25rem;
+}
+
+.legal li {
+    list-style: disc;
+    margin-bottom: .5rem;
+}
+
+.legal a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.legal .callout {
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: #F4F7FE;
+    border-left: 3px solid var(--primary);
+    border-radius: .25rem;
+}
+
+.legal .callout p {
+    font-size: .95rem;
+}
