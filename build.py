@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Split site.src.html into one page per nav item. Edit site.src.html, then run: python3 build.py"""
-import re, pathlib, time
+import re, json, pathlib, time
 VER = str(int(time.time()))
 root = pathlib.Path(__file__).parent
+# Contact details live here only. Change them, run this script, and every page, the form and the catalog follow.
+# (privacy.inc.html / terms.inc.html are legal text and keep their own wording.)
+CONTACT = {'PHONE': '(778) 907-8907', 'TEL': '+17789078907', 'SALES': 'sales@aiposlab.com', 'SUPPORT': 'support@aiposlab.com'}
+(root / 'contact.js').write_text('window.CARTE_CONTACT = %s;\n' % json.dumps({k.lower(): v for k, v in CONTACT.items()}), encoding='utf8')
 src = (root / 'site.src.html').read_text(encoding='utf8')
 head, rest = src.split('<main id="top">', 1)
 body, tail = rest.split('</main>', 1)
@@ -35,7 +39,9 @@ for name, title, keys, active in PAGES:
     html = h + '<main id="top">\n\n' + main + '</main>' + tail
     if keys[0].startswith('legal:'):
         html = html.replace('href="#quote"', 'href="index.html#quote"')
-    for f in ('style.css', 'screens.js', 'app.js'):
+    for k, v in CONTACT.items():
+        html = html.replace('{{%s}}' % k, v)
+    for f in ('style.css', 'contact.js', 'screens.js', 'app.js'):
         html = html.replace('"%s"' % f, '"%s?v=%s"' % (f, VER))
     (root / name).write_text(html, encoding='utf8')
     print(name, len(html))

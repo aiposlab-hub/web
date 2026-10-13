@@ -751,3 +751,10 @@ h1,h2,h3{text-wrap:balance}
   .plat-base{margin-top:0;border-radius:4px 4px 20px 20px;padding:18px 24px}
 }
 @media(prefers-reduced-motion:reduce){.plat-mods li,.plat-base{opacity:1;transform:none;transition:none}}
+/* quote form: hidden bot trap, status line, sent state */
+.form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form .form-msg{grid-column:1/-1;margin:0;font-size:14.5px;font-weight:600;color:#0b6b3a;background:#e8f6ee;border-radius:10px;padding:12px 14px}
+.form .form-msg.bad{color:#9b1c1c;background:#fdecec}
+.form .form-msg a{color:inherit}
+.form .btn:disabled{opacity:.6;cursor:default}
+.form.sent label,.form.sent .btn,.form.sent small{display:none}

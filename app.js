@@ -110,10 +110,33 @@
 
   $$('.faq button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
 
-  on('#quoteForm', form => form.addEventListener('submit', e => {
-    e.preventDefault();
-    const f = new FormData(e.target), L = [];
-    for (const [k, v] of f) if (v) L.push(`${k}: ${v}`);
-    location.href = 'mailto:info@aiposlab.com?subject=' + encodeURIComponent('Quote request: ' + (f.get('Restaurant') || '')) + '&body=' + encodeURIComponent(L.join('\n'));
-  }));
+  // Quote form: posts to the Google Sheet receiver (forms/quote-form.gs). Until FORM_URL is set it opens an email instead.
+  const C = window.CARTE_CONTACT;
+  const FORM_URL = '';
+  on('#quoteForm', form => {
+    const msg = $('.form-msg', form), btn = $('button[type=submit]', form), note = $('.mailto-note', form);
+    const say = (text, bad) => { msg.textContent = text; msg.hidden = !text; msg.classList.toggle('bad', !!bad); };
+    const mailto = f => { const L = []; for (const [k, v] of f) if (v && k !== 'website') L.push(`${k}: ${v}`); return 'mailto:' + C.sales + '?subject=' + encodeURIComponent('Quote request: ' + (f.get('Restaurant') || '')) + '&body=' + encodeURIComponent(L.join('\n')); };
+    if (FORM_URL && note) note.hidden = true;
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const f = new FormData(form);
+      if (!String(f.get('Phone') || '').trim() && !String(f.get('Email') || '').trim()) { say('Add a phone number or an email so we can reach you.', true); form.elements.Phone.focus(); return; }
+      if (!FORM_URL) { location.href = mailto(f); return; }
+      if (f.get('SMS consent')) f.set('SMS consent text', $('.check span', form).textContent.trim());
+      f.set('Page', location.href); f.set('Browser', navigator.userAgent);
+      btn.disabled = true; say('Sending…');
+      try {
+        const r = await fetch(FORM_URL, { method: 'POST', body: new URLSearchParams(f) });
+        const j = await r.json();
+        if (!j.ok) throw new Error(j.error || 'failed');
+        form.reset(); form.classList.add('sent');
+        say('Thanks. Your request is in, and we will call or email you within one business day.');
+      } catch (err) {
+        btn.disabled = false;
+        msg.innerHTML = 'That did not go through. Please try again, call ' + C.phone + ', or <a href="' + mailto(f) + '">send it by email</a>.';
+        msg.hidden = false; msg.classList.add('bad');
+      }
+    });
+  });
 })();

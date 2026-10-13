@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1791853136">
+<link rel="stylesheet" href="style.css?v=1791874015">
 </head>
 <body>
 
@@ -187,9 +187,10 @@
       <p class="eyebrow" style="color:#fff;opacity:.85">Get a quote</p>
       <h2 class="rv">See Carte with <br>your own menu.</h2>
       <p class="sub rv">Tell us how you serve. We'll call with a quote and, if you like, show you Carte with your dishes in it.</p>
-      <p class="contact rv"><a href="tel:+17789078907">(778) 907-8907</a><a href="mailto:info@aiposlab.com">info@aiposlab.com</a><span>Carte by AIPOS LAB Inc. · Burnaby, BC</span></p>
+      <p class="contact rv"><a href="tel:+17789078907">(778) 907-8907</a><a href="mailto:sales@aiposlab.com">sales@aiposlab.com</a><span>Carte by AIPOS LAB Inc. · Burnaby, BC</span></p>
     </div>
     <form class="form rv" id="quoteForm">
+      <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
       <label>Your name<input name="Name" required autocomplete="name"></label>
       <label>Restaurant name<input name="Restaurant" required autocomplete="organization"></label>
       <label>Mobile phone (optional)<input name="Phone" type="tel" autocomplete="tel"></label>
@@ -197,8 +198,9 @@
       <label>Type of restaurant<select name="Type"><option value="">Choose one</option><option>Full service</option><option>Korean BBQ or hot pot</option><option>Sushi or Japanese</option><option>Quick service or takeout</option><option>Cafe or bakery</option><option>Bar</option><option>Other</option></select></label>
       <label>Number of tables<select name="Tables"><option value="">Choose one</option><option>1–15</option><option>16–40</option><option>41 or more</option><option>No tables (takeout only)</option></select></label>
       <label class="check"><input type="checkbox" name="SMS consent" value="Yes"><span>I agree to receive SMS text messages from AIPOS LAB INC. about my account and service updates at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply HELP for help, STOP to unsubscribe. Consent is not a condition of purchase.</span></label>
+      <p class="form-msg" role="status" aria-live="polite" hidden></p>
       <button class="btn btn-blue btn-lg" type="submit">Get a quote</button>
-      <small>By sending this form you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>. It opens an email to our team with your answers filled in.</small>
+      <small>By sending this form you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.<span class="mailto-note"> It opens an email to our team with your answers filled in.</span></small>
     </form>
   </div>
 </section>
@@ -207,12 +209,13 @@
 
 <footer class="foot"><div class="wrap foot-in">
   <div><img src="img/logo.svg" alt="Carte"><p class="co"><img src="img/aipos.svg" alt="">Carte is a product of AIPOS LAB INC.</p><p>327D – 4501 North Road, Burnaby, BC V3N 4R7, Canada</p></div>
-  <div><a href="tel:+17789078907">(778) 907-8907</a><a href="mailto:info@aiposlab.com">info@aiposlab.com</a></div>
+  <div><a href="tel:+17789078907">(778) 907-8907</a><a href="mailto:sales@aiposlab.com">sales@aiposlab.com</a><a href="mailto:support@aiposlab.com">Support: support@aiposlab.com</a></div>
   <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="privacy.html#cookies">Cookies</a></div>
   <small>© 2026 AIPOS LAB INC. All rights reserved. Product screens shown with demo data.</small>
 </div></footer>
 
-<script src="screens.js?v=1791853136"></script>
-<script src="app.js?v=1791853136"></script>
+<script src="contact.js?v=1791874015"></script>
+<script src="screens.js?v=1791874015"></script>
+<script src="app.js?v=1791874015"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
   document.documentElement.lang = lang;
   document.body.classList.add(lang);
 
+  const C = window.CARTE_CONTACT;
   const T = {
     en: {
       tag: 'Restaurant POS · Canada & US',
@@ -68,14 +69,14 @@
   }[lang];
 
   const top = `<header class="top"><span class="lock"><img src="img/logo.svg" alt="Carte"><i>by</i><img class="am" src="img/aipos.svg" alt=""><b>AIPOS LAB</b></span><span class="mono">${T.tag}</span></header>`;
-  const foot = `<footer class="foot-line"><span>(778) 907-8907 · info@aiposlab.com · aiposlab.com</span><span>${T.demo}</span></footer>`;
+  const foot = `<footer class="foot-line"><span>${C.phone} · ${C.sales} · aiposlab.com</span><span>${T.demo}</span></footer>`;
   const tab = (id, cls = '') => `<div class="tablet flat ${cls}"><div class="scr" data-s="${id}"></div></div>`;
   const steps = `<div class="steps5">${T.steps.map(([a, b], i) => `<div><i>${i + 1}</i><h3>${a}</h3><p>${b}</p></div>`).join('')}</div>`;
   const trio = `<div class="trio">${['kds', 'floor', 'pay'].map((s, i) => `<div>${tab(s)}<h3>${T.caps[i][0]}</h3><p>${T.caps[i][1]}</p></div>`).join('')}</div>`;
   const feat = (cls = '') => `<div class="feat ${cls}">${T.feat.map(([a, b]) => `<div><h3>${a}</h3><p>${b}</p></div>`).join('')}</div>`;
   const soon = '';
   const info = `<div class="info">${T.info.map(([a, b]) => `<div><span class="mono">${a}</span><p>${b}</p></div>`).join('')}</div>`;
-  const cta = `<div class="cta"><div><h2>${T.ctaH}</h2><p>${T.ctaP}</p></div><address>(778) 907-8907<br>info@aiposlab.com<small>${T.hours}</small><small>Carte by AIPOS LAB Inc. · Burnaby, BC</small></address></div>`;
+  const cta = `<div class="cta"><div><h2>${T.ctaH}</h2><p>${T.ctaP}</p></div><address>${C.phone}<br>${C.sales}<small>${T.hours}</small><small>Carte by AIPOS LAB Inc. · Burnaby, BC</small></address></div>`;
   const tools = `<div class="tools5">${T.tools.map(t => `<span>${t}</span>`).join('')}<b>→</b><strong>CARTE</strong></div>`;
 
   const P = pages === 2 ? [
