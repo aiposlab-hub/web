@@ -1,570 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIPOS LAB - AI-Powered Restaurant POS System</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte by AIPOS LAB — One platform for your whole restaurant</title>
+<meta name="description" content="Carte is one platform for your whole restaurant: table ordering, POS, kitchen display, online and delivery orders, payments and reports, with one login and one team to call.">
+<link rel="icon" href="img/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1791853136">
 </head>
 <body>
-<!-- Navigation -->
-<header>
-    <div class="inner">
-        <div class="header-home">
-            <a href="#">AIPOS LAB</a>
-        </div>
-        <div class="header-util">
-            <nav>
-                <a href="#solutions">Solutions</a>
-                <a href="#flow">How It Works</a>
-                <a href="#about">About</a>
-                <a href="#case-studies">Case Studies</a>
-                <a href="#pricing">Pricing</a>
-            </nav>
-            <button class="header-demo">
-                Request Demo
-            </button>
-        </div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Carte by AIPOS LAB, home"><img src="img/logo.svg" alt="Carte"><span>by <img src="img/aipos.svg" alt="">AIPOS LAB</span></a>
+    <nav class="nav-links">
+      <a href="index.html#flow">How it works</a>
+      <a href="pos.html">POS</a>
+      <a href="kitchen.html">Kitchen</a>
+      <a href="table-order.html">Table Order</a>
+      <a href="back-office.html">Back office</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="tel" href="tel:+17789078907">(778) 907-8907</a>
+      <a class="btn btn-blue" href="#quote">Get a quote</a>
     </div>
+  </div>
 </header>
 
-<!-- Hero Section -->
-<section class="visual">
-    <!--    <video autoplay muted loop>-->
-    <!--        <source src="https://example.com/restaurant-video.mp4" type="video/mp4">-->
-    <!--    </video>-->
-    <div class="inner">
-        <h1 data-aos="fade-up">
-            MANAGE LESS with<br/><span>Carte POS</span>
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-            We Automate Management So Owners Can Focus On Hospitality.
-        </p>
+<main id="top">
 
-        <ul class="visual-benefits">
-            <li data-aos="fade-up" data-aos-delay="200">
-                <h3><span id="revenue-counter">0</span>%</h3>
-                <span>Increase in monthly net profit</span>
-            </li>
-            <li data-aos="fade-up" data-aos-delay="300">
-                <h3><span id="time-counter">0</span>%</h3>
-                <span>Faster order processing</span>
-            </li>
-            <li data-aos="fade-up" data-aos-delay="400">
-                <h3><span id="cost-counter">0</span>%</h3>
-                <span>Reduction in food waste</span>
-            </li>
-        </ul>
-
-        <div class="visual-example">
-            <div class="visual-img">
-                <img src="/img/visual-pos.png" alt="capture">
-            </div>
-            <button class="visual-demo">
-                <span>See Your ROI<br/>in a 30-Minute Demo</span>
-                <img src="/img/visual-arr.png" alt="arrow">
-            </button>
-        </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">One platform · Canada &amp; US</p>
+      <h1>
+        <span class="line"><span>Manage less.</span></span>
+        <span class="line"><span>Serve more.</span></span>
+      </h1>
+      <p class="lede">Table ordering, POS, kitchen display, online and delivery orders, payments and reports. Carte runs all of it on <b>one platform</b>, with one login and one team to call.</p>
+      <div class="cta-row">
+        <a class="btn btn-blue btn-lg" href="#quote">Get a quote</a>
+        <a class="link-arrow" href="#platform">See the platform</a>
+      </div>
     </div>
-    <div class="visual-mask" style="transform: scale(1, 0)"></div>
+
+    <div class="hero-stage" id="heroStage">
+      <div class="glow"></div>
+      <div class="tablet" id="heroTablet"><div class="scr" id="heroTO"></div></div>
+      <div class="ticket" id="heroTicket"></div>
+    </div>
+  </div>
 </section>
 
-<!-- Solutions Section -->
-<section id="solutions" class="commonSection">
-    <div class="inner">
-        <div class="solutions-header">
-            <h2 data-aos="fade-right">
-                One Platform for<br/>
-                Optimal Table Turnover,<br/>
-                Labor Savings,<br/>
-                and Eliminating System Complexity
-            </h2>
-            <p data-aos="fade-right" data-aos-delay="100">
-                An all-in-one system that unifies POS, payments, inventory, payroll, tips, HR—lowering labor cost,
-                optimizing table turnover, and reducing compliance risk.
-            </p>
-        </div>
-
-        <ul class="solutions-contents">
-            <!-- Card 1: Turnover -->
-            <li data-aos="fade-left" data-aos-delay="150">
-                <h3>Increase Restaurant Seat Turnover Rate</h3>
-                <p>
-                    AI-guided seating, ordering, and checkout speed up service. Serve more guests with the same space
-                    and fewer labor hours.
-                </p>
-            </li>
-
-            <!-- Card 2: Unified Operations -->
-            <li data-aos="fade-left" data-aos-delay="200">
-                <h3>Unified Operations</h3>
-                <p>
-                    POS, delivery, reservations, payments, and inventory in one place. Real-time inventory updates and
-                    smart order routing reduce fees and back-of-house work.
-                </p>
-            </li>
-
-            <!-- Card 3: Workforce, Tips & Payroll -->
-            <li data-aos="fade-left" data-aos-delay="250">
-                <h3>Workforce, Tips & Payroll</h3>
-                <p>
-                    Time tracking, tip pooling/allocations, overtime alerts, and payroll exports in one workflow—cut
-                    admin hours and costly compliance risk.
-                </p>
-            </li>
-        </ul>
+<section class="plat" id="platform">
+  <div class="wrap">
+    <p class="eyebrow">What runs on it</p>
+    <h2 class="rv">Every part of your restaurant, <br>on one platform.</h2>
+    <p class="sub rv">Most setups stitch a POS, an ordering app and a kitchen screen together. Carte is built as one system, so every part shares the same menu, the same orders and the same report.</p>
+    <div class="plat-map">
+      <ul class="plat-mods">
+        <li style="--i:0"><a href="table-order.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg><b>Table Order</b><span>Guests order from the table</span></a></li>
+        <li style="--i:1"><a href="pos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="9" rx="2"/><path d="M3 21v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4zM9 18h6"/></svg><b>POS</b><span>Counter, floor plan and staff</span></a></li>
+        <li style="--i:2"><a href="kitchen.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg><b>Kitchen Display</b><span>Every ticket on one board</span></a></li>
+        <li style="--i:3"><a href="back-office.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.500 3 14.500 0 18M12 3c-3 3.500-3 14.500 0 18"/></svg><b>Online ordering</b><span>Your own ordering site</span></a></li>
+        <li style="--i:4"><a href="back-office.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg><b>Delivery apps</b><span>Uber Eats, DoorDash, SkipTheDishes, Fantuan</span></a></li>
+        <li style="--i:5"><a href="pos.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg><b>Payments</b><span>Card, cash, points and split bills</span></a></li>
+        <li style="--i:6"><a href="back-office.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.700 5.600 6.100.800-4.500 4.300 1.100 6.100L12 16.900l-5.400 2.900 1.100-6.100L3.200 9.400l6.100-.8z"/></svg><b>Membership</b><span>Points, tiers and gift cards</span></a></li>
+        <li style="--i:7"><a href="back-office.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M11 20V4M17 20v-6M2 20h20"/></svg><b>Reports</b><span>Sales, tips and insights</span></a></li>
+      </ul>
+      <div class="plat-base">
+        <p><img src="img/logo.svg" alt="Carte"><b>One platform</b></p>
+        <ul><li>One menu</li><li>One order list</li><li>One guest list</li><li>One report</li><li>One login</li><li>One team to call</li></ul>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Features Section -->
-<section id="software" class="commonSection">
-    <div class="section-header">
-        <h2 data-aos="fade-up">
-            Key Features of Our Software
-        </h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-            5 Keys to Restaurant Success
-        </p>
+<section class="tools">
+  <div class="wrap tools-grid">
+    <div>
+      <p class="eyebrow">Why owners switch</p>
+      <h2 class="rv">Five tools. <br>One platform.</h2>
+      <p class="sub rv">Most restaurants run a POS, a card terminal, an online ordering site, a row of delivery tablets and a spreadsheet. Five logins, five bills, and nobody who sees the whole night.</p>
+      <p class="sub rv">Carte puts orders, payments and reports in one flow, with one team to call.</p>
     </div>
-
-    <ul class="software-contents">
-        <li data-aos="fade-up" data-aos-delay="200">
-            <div class="software-icon"><i style="background-position-x: 0;"></i></div>
-            <h3>Reliable</h3>
-            <p>Stable cloud server and ultra-fast payment processing</p>
-        </li>
-
-        <li data-aos="fade-up" data-aos-delay="300">
-            <div class="software-icon"><i style="background-position-x: -1em;"></i></div>
-            <h3>Convenient</h3>
-            <p>Intuitive admin dashboard to manage your business from anywhere</p>
-        </li>
-
-        <li data-aos="fade-up" data-aos-delay="400">
-            <div class="software-icon"><i style="background-position-x: -2em;"></i></div>
-            <h3>Data-Driven</h3>
-            <p>Comprehensive analysis of sales and local market trends to maximize
-                profitability</p>
-        </li>
-
-        <li data-aos="fade-up" data-aos-delay="500">
-            <div class="software-icon"><i style="background-position-x: -3em;"></i></div>
-            <h3>Predictive AI</h3>
-            <p>AI analyzes past data to forecast demand and help you preparing
-                inventories and promotions</p>
-        </li>
-
-        <li data-aos="fade-up" data-aos-delay="600">
-            <div class="software-icon"><i style="background-position-x: -4em;"></i></div>
-            <h3>Efficient</h3>
-            <p>Minimize repetitive staff tasks and automate workflow</p>
-        </li>
-    </ul>
+    <div class="merge" role="img" aria-label="Five separate tools merging into Carte">
+      <span class="m1">POS terminal</span><span class="m2">Card terminal</span><span class="m3">Online ordering</span><span class="m4">Delivery tablets</span><span class="m5">Reports &amp; spreadsheets</span>
+      <div class="one"><img src="img/logo.svg" alt=""><small>One menu. One order. One report.</small></div>
+    </div>
+  </div>
 </section>
 
-<!-- Flow Section -->
-<section id="flow" class="commonSection">
-    <div class="inner">
-        <div class="section-header">
-            <h2 data-aos="fade-up">
-                The Carte POS Flow
-            </h2>
-            <p data-aos="fade-up" data-aos-delay="100">
-                How Data Becomes Profit for Your Restaurant
-            </p>
+<section class="flow" id="flow">
+  <div class="wrap">
+    <p class="eyebrow">One order, every screen</p>
+    <h2 class="rv">Follow one order <br>through Carte.</h2>
+    <p class="sub rv">See how a single order travels from the table tablet to the kitchen, the floor, the bill and tonight's report.</p>
+
+    <div class="flow-grid">
+      <ol class="steps" id="steps">
+        <li class="step on" data-i="0"><span class="num">1</span><h3>Guests order at the table.</h3><p>Guests add dishes, pick add-ons and send the order from the tablet on their table. Servers spend less time taking orders and more time with guests.</p><a class="more" href="table-order.html">See Table Order</a></li>
+        <li class="step" data-i="1"><span class="num">2</span><h3>The kitchen gets the ticket instantly.</h3><p>The ticket lands on the kitchen display the moment it is sent, next to the online and delivery orders. Cooks tap each one from New to Prep, Cooking and Ready.</p><a class="more" href="kitchen.html">See Kitchen Display</a></li>
+        <li class="step" data-i="2"><span class="num">3</span><h3>Servers see every table.</h3><p>Every table shows whether it is occupied and for how long. Tap a table to see exactly what was ordered.</p><a class="more" href="pos.html">See the POS</a></li>
+        <li class="step" data-i="3"><span class="num">4</span><h3>The bill is paid, split any way.</h3><p>Card, cash or points. Pay the full amount, or split by item, by amount or by payer on the same screen.</p><a class="more" href="pos.html">See the POS</a></li>
+        <li class="step" data-i="4"><span class="num">5</span><h3>The report is ready at close.</h3><p>Sales by hour, tax, tips and best sellers are in the report the moment the bill closes. No spreadsheet.</p><a class="more" href="back-office.html">See the back office</a></li>
+      </ol>
+
+      <div class="flow-stage">
+        <div class="flow-sticky">
+          <div class="rail"><b id="railFill"></b><span class="on">Table</span><span>Kitchen</span><span>Floor</span><span>Pay</span><span>Report</span></div>
+          <div class="tablet flat"><div class="scr stack-scr">
+            <div class="fs on" id="fTable"></div>
+            <div class="fs" id="fKitchen"></div>
+            <div class="fs" id="fFloor"></div>
+            <div class="fs" id="fPay"></div>
+            <div class="fs" id="fReport"></div>
+          </div></div>
         </div>
-
-        <div class="flow-contents">
-            <div class="flow-item" data-aos="fade-right">
-                <div class="flow-item-text">
-                    <h3>Order Flow | Front of House</h3>
-                    <p>This is the first point of contact with your customer and where
-                        all data begins. An intuitive UI and fast order processing enhance customer satisfaction and
-                        ensure every piece of customer experience data is accurately captured.</p>
-                    <ul>
-                        <li>Intuitive Menu UI</li>
-                        <li>Tableside Ordering & Payment</li>
-                        <li>Integrated Dine-in, Takeout & Delivery Management</li>
-                        <li>Fast Order Entry & Error Minimization</li>
-                    </ul>
-                </div>
-                <div class="flow-item-img" style="background-color: #D1E6D1">
-                    <img src="/img/flow-1.png" alt="image">
-                </div>
-            </div>
-
-            <div class="flow-item" data-aos="fade-left">
-                <div class="flow-item-text">
-                    <h3>Ops View | Back of House</h3>
-                    <p>Data captured from the Front of House is instantly relayed to the
-                        kitchen and back office to automate operations. This ensures stability by preventing missed
-                        orders, optimizing inventory, and enabling efficient staff management.</p>
-                    <ul>
-                        <li>Real-time Order Sync (KDS/Kitchen Display System)</li>
-                        <li>AI-Powered Inventory Tracking & Optimized Ordering</li>
-                        <li>Staff Permissions & Schedule Management</li>
-                        <li>Visual Floor Plan & Table Management</li>
-                    </ul>
-                </div>
-                <div class="flow-item-img" style="background-color: #EDECFE">
-                    <img src="/img/flow-2.png" alt="image">
-                </div>
-            </div>
-
-            <div class="flow-item" data-aos="fade-right">
-                <div class="flow-item-text">
-                    <h3>Business Wise | Insight Engine</h3>
-                    <p>All operational data converges into the 'Insight Engine.' Here,
-                        the restaurant owner transforms from an operator into a strategist who makes decisions based
-                        on data. Carte POS is the business brain that grows your restaurant.</p>
-                    <ul>
-                        <li>Real-time Sales Dashboard & Reports</li>
-                        <li>Statistical Analysis by Menu/Time of Day</li>
-                        <li>AI-Powered Recommendations (New Menus, Promotions, Price Optimization)</li>
-                        <li>Full Compliance with Global Privacy Regulations (e.g., GDPR)</li>
-                    </ul>
-                </div>
-                <div class="flow-item-img" style="background-color: #FFE1E1">
-                    <img src="/img/flow-3.png" alt="image">
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="commonSection">
-    <div class="inner">
-        <div class="about-contents">
-            <div class="about-content-text">
-                <div class="section-header">
-                    <h2 data-aos="fade-right">
-                        About Aipos Lab
-                    </h2>
-                    <p data-aos="fade-right" data-aos-delay="100">
-                        Your Trusted Technology Partner
-                    </p>
-                </div>
-                <ul data-aos="fade-right">
-                    <li>
-                        <h3>Our Mission</h3>
-                        <p class="text-gray-600 mb-6">AIPOS LAB was founded to help restaurant owners escape the
-                            complexities of
-                            management and focus on the essence of service: providing great food and warm hospitality.
-                            We
-                            use AI
-                            to automate operations and empower every restaurant to make smart, data-driven
-                            decisions.</p>
-                    </li>
-                    <li>
-                        <h3>Leadership & The Lab</h3>
-                        <p class="text-gray-600">Our leadership team brings decades of experience, including a CEO with
-                            30
-                            years
-                            in IT and a CTO with 20 years as a SaaS architect.</p>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="about-content-tech" data-aos="fade-left">
-                <h3>Proof of Technology</h3>
-                <ul>
-                    <li class="green">
-                        <i class="about-icon" style="background-position-x: -4em;"></i>
-                        <p>Patent for AI Demand Forecasting Algorithm</p>
-                    </li>
-                    <li class="blue">
-                        <i class="about-icon" style="background-position-x: -5em;"></i>
-                        <p>Copyright for Cloud-Based POS System</p>
-                    </li>
-                    <li class="blue">
-                        <i class="about-icon" style="background-position-x: -6em;"></i>
-                        <p>Information Security Management System</p>
-                    </li>
-                    <li class="green">
-                        <i class="about-icon" style="background-position-x: -7em;"></i>
-                        <p>PCI DSS Data Security Standard Compliance</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section class="posteaser">
+  <div class="wrap pt-grid">
+    <div>
+      <p class="eyebrow">POS</p>
+      <h2 class="rv">Counter orders work <br>the same way.</h2>
+      <p class="sub rv">Not every guest orders from a tablet. Servers and cashiers ring orders in on the POS, and they join the same kitchen board, the same floor plan and the same report.</p>
+      <div class="cta-row rv"><a class="btn btn-blue btn-lg" href="pos.html">See the POS</a><a class="link-arrow side" href="kitchen.html">See the kitchen display</a></div>
     </div>
+    <div class="tablet flat rv"><div class="scr" id="homeReg"></div></div>
+  </div>
 </section>
 
-<!-- Case Studies Section -->
-<section id="case-studies" class="commonSection">
-    <div class="inner">
-        <div class="section-header">
-            <h2 data-aos="fade-up">
-                Customer Success Stories
-            </h2>
-            <p data-aos="fade-up" data-aos-delay="100">
-                Real Results from Real Restaurants
-            </p>
-        </div>
-
-        <div class="case-studies-contents" data-aos="fade-up">
-            <div class="case-studies-img">
-                <img src="/img/stories-img.png" alt="Restaurant Case Study">
-            </div>
-            <div class="case-studies-text">
-                <h3>"15% Increase in Monthly Net Profit After Adopting AI"</h3>
-
-                <ul class="case-studies-top">
-                    <li>
-                        <h4 style="color: var(--primary)">The Challenge</h4>
-                        <p>Due to unpredictable customer demand, we had to discard a significant
-                            amount of ingredients each month and wasted time manually processing orders from numerous
-                            delivery apps.</p>
-                    </li>
-
-                    <li>
-                        <h4 style="color: #2AC9A4">The Solution</h4>
-                        <p>After implementing Carte POS, the 'AI Demand Forecast' feature allowed
-                            us to optimize our ordering based on accurate predictions for weekends and weather. All
-                            delivery app orders were integrated into the POS, eliminating chaos in the kitchen.</p>
-                    </li>
-                </ul>
-
-                <div class="case-studies-bottom">
-                    <h4>The Results</h4>
-                    <ul>
-                        <li>
-                            <strong>20%</strong>
-                            <p>Reduction in<br/>food waste</p>
-                        </li>
-                        <li>
-                            <strong>30%</strong>
-                            <p>Faster<br/>order processing</p>
-                        </li>
-                        <li>
-                            <strong>15%</strong>
-                            <p>Increase in<br/>monthly net profit</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<section class="quote" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-copy">
+      <p class="eyebrow" style="color:#fff;opacity:.85">Get a quote</p>
+      <h2 class="rv">See Carte with <br>your own menu.</h2>
+      <p class="sub rv">Tell us how you serve. We'll call with a quote and, if you like, show you Carte with your dishes in it.</p>
+      <p class="contact rv"><a href="tel:+17789078907">(778) 907-8907</a><a href="mailto:info@aiposlab.com">info@aiposlab.com</a><span>Carte by AIPOS LAB Inc. · Burnaby, BC</span></p>
     </div>
+    <form class="form rv" id="quoteForm">
+      <label>Your name<input name="Name" required autocomplete="name"></label>
+      <label>Restaurant name<input name="Restaurant" required autocomplete="organization"></label>
+      <label>Mobile phone (optional)<input name="Phone" type="tel" autocomplete="tel"></label>
+      <label>Email<input name="Email" type="email" autocomplete="email"></label>
+      <label>Type of restaurant<select name="Type"><option value="">Choose one</option><option>Full service</option><option>Korean BBQ or hot pot</option><option>Sushi or Japanese</option><option>Quick service or takeout</option><option>Cafe or bakery</option><option>Bar</option><option>Other</option></select></label>
+      <label>Number of tables<select name="Tables"><option value="">Choose one</option><option>1–15</option><option>16–40</option><option>41 or more</option><option>No tables (takeout only)</option></select></label>
+      <label class="check"><input type="checkbox" name="SMS consent" value="Yes"><span>I agree to receive SMS text messages from AIPOS LAB INC. about my account and service updates at the mobile number provided. Message frequency varies. Message and data rates may apply. Reply HELP for help, STOP to unsubscribe. Consent is not a condition of purchase.</span></label>
+      <button class="btn btn-blue btn-lg" type="submit">Get a quote</button>
+      <small>By sending this form you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>. It opens an email to our team with your answers filled in.</small>
+    </form>
+  </div>
 </section>
 
-<!-- Pricing Section -->
-<section id="pricing" class="commonSection">
-    <div class="inner">
-        <div class="section-header">
-            <h2 data-aos="fade-up">
-                Pricing & Getting Started
-            </h2>
-            <p data-aos="fade-up" data-aos-delay="100">
-                Contact our team for custom pricing and package details.
-            </p>
-        </div>
+</main>
 
-        <ul class="pricing-contents">
-            <li data-aos="fade-right">
-                <div>
-                    <strong>SaaS Subscription</strong>
-                    <p>Flexible plans tailored to your restaurant's size and operational needs.</p>
-                </div>
-                <div class="price">
-                    <b>Contact Sales</b>
-                </div>
-            </li>
+<footer class="foot"><div class="wrap foot-in">
+  <div><img src="img/logo.svg" alt="Carte"><p class="co"><img src="img/aipos.svg" alt="">Carte is a product of AIPOS LAB INC.</p><p>327D – 4501 North Road, Burnaby, BC V3N 4R7, Canada</p></div>
+  <div><a href="tel:+17789078907">(778) 907-8907</a><a href="mailto:info@aiposlab.com">info@aiposlab.com</a></div>
+  <div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="privacy.html#cookies">Cookies</a></div>
+  <small>© 2026 AIPOS LAB INC. All rights reserved. Product screens shown with demo data.</small>
+</div></footer>
 
-            <li data-aos="fade-right" data-aos-delay="100">
-                <div>
-                    <strong>Payment Processing</strong>
-                    <p>Speak with our team to discuss payment processing options and rates.</p>
-                </div>
-                <div class="price">
-                    <b>Contact Sales</b>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<section id="request" class="commonSection">
-    <div class="inner">
-        <div class="section-header">
-            <h3>Get AI-Powered Restaurant Intelligence</h3>
-        </div>
-
-        <form id="request-form">
-            <div class="w-50">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" class="input">
-            </div>
-            <div class="w-50">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" class="input">
-            </div>
-
-            <div class="w-50">
-                <label for="restaurant">Restaurant Name</label>
-                <input type="text" id="restaurant" class="input">
-            </div>
-            <div class="w-50">
-                <label for="phone">Mobile Phone Number <span class="optional">(optional)</span></label>
-                <input type="tel" id="phone" class="input" autocomplete="tel">
-            </div>
-
-            <div>
-                <label for="message">Tell Us About Your Needs</label>
-                <textarea id="message" rows="4" class="input"></textarea>
-            </div>
-
-            <div class="consent-group">
-                <div class="consent">
-                    <input type="checkbox" id="sms-consent">
-                    <label for="sms-consent">
-                        I agree to receive SMS text messages from AIPOS LAB INC. about my account and service
-                        updates at the mobile number provided. Message frequency varies. Message and data rates
-                        may apply. Reply HELP for help, STOP to unsubscribe. Consent is not a condition of purchase.
-                    </label>
-                </div>
-                <div class="consent">
-                    <input type="checkbox" id="terms-consent">
-                    <label for="terms-consent">
-                        I have read and agree to the <a href="terms.html">Terms of Service</a> and
-                        <a href="privacy.html">Privacy Policy</a>.
-                    </label>
-                </div>
-            </div>
-
-            <button type="submit" class="submit">
-                Request Free Hardware & Demo
-            </button>
-        </form>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="inner">
-        <div class="footer-info">
-            <div>
-                <h4>AIPOS LAB</h4>
-                <p>We handle the management, so restaurant owners can focus on what matters most:
-                    hospitality.</p>
-            </div>
-
-            <div>
-                <h4>Solutions</h4>
-                <ul>
-                    <li><a href="#">Instant Order Assistant</a></li>
-                    <li><a href="#">Smart Payment Integration</a></li>
-                    <li><a href="#">Menu & Inventory Sync</a></li>
-                    <li><a href="#">Customer Engagement Tools</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Leadership</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Connect</h4>
-                <div class="connect-icon">
-                    <a href="#" target="_blank">
-                        <i style="background-position-x: 0;"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i style="background-position-x: -1em;"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i style="background-position-x: -2em;"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i style="background-position-x: -3em;"></i>
-                    </a>
-                </div>
-
-                <div>
-                    <p>Email: info@aiposlab.com</p>
-                    <p>Phone: (778) 907-8907</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-legal">
-            <p><strong>AIPOS LAB INC.</strong></p>
-            <p>327D &ndash; 4501 North Road, Burnaby, BC V3N 4R7, Canada</p>
-        </div>
-
-        <div class="footer-botom">
-            <p class="footer-copyright">© 2026 AIPOS LAB INC. All rights reserved.</p>
-            <div class="footer-policy">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="privacy.html#cookies">Cookies</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script>
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true
-    });
-
-    // Animate counters
-    const animateCounters = (id, max) => {
-        const counterElem = document.getElementById(id);
-        const counterMax = max;
-        let counter = 0;
-        const setCount = setInterval(() => {
-            counter++
-            counterElem.innerText = counter;
-            if (counter >= counterMax) {
-                clearInterval(setCount)
-            }
-        }, 50)
-    };
-
-    setTimeout(() => {
-        animateCounters('revenue-counter', 15);
-        animateCounters('time-counter', 30);
-        animateCounters('cost-counter', 20);
-    }, 500)
-
-    const visual = document.querySelector('.visual-example');
-    const visualMask = document.querySelector('.visual-mask');
-
-    function findPosition(entry) {
-        let pos = window.innerHeight - entry.target.getClientRects()[0].bottom + 200
-        let end = entry.target.clientHeight / 2
-        if (end > pos && pos > 0) {
-            let scale = (pos / end).toFixed(2)
-            visualMask.style.transform = `scale(1, ${scale})`;
-        }
-    }
-
-    let visualHandler = null;
-    const visualAnimate = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                visualHandler = () => findPosition(entry);
-                window.addEventListener('scroll', visualHandler);
-            } else {
-                window.removeEventListener('scroll', visualHandler);
-                visualHandler = null;
-            }
-        });
-    });
-
-    visualAnimate.observe(visual);
-</script>
+<script src="screens.js?v=1791853136"></script>
+<script src="app.js?v=1791853136"></script>
 </body>
 </html>
