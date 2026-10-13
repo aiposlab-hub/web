@@ -5,7 +5,7 @@ VER = str(int(time.time()))
 root = pathlib.Path(__file__).parent
 # Contact details live here only. Change them, run this script, and every page, the form and the catalog follow.
 # (privacy.inc.html / terms.inc.html are legal text and keep their own wording.)
-CONTACT = {'PHONE': '(778) 907-8907', 'TEL': '+17789078907', 'SALES': 'sales@aiposlab.com', 'SUPPORT': 'support@aiposlab.com'}
+CONTACT = {'PHONE': '(236) 512-9046', 'TEL': '+12365129046', 'SALES': 'sales@aiposlab.com', 'SUPPORT': 'support@aiposlab.com'}
 (root / 'contact.js').write_text('window.CARTE_CONTACT = %s;\n' % json.dumps({k.lower(): v for k, v in CONTACT.items()}), encoding='utf8')
 src = (root / 'site.src.html').read_text(encoding='utf8')
 head, rest = src.split('<main id="top">', 1)

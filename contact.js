@@ -1,1 +1,1 @@
-window.CARTE_CONTACT = {"phone": "(778) 907-8907", "tel": "+17789078907", "sales": "sales@aiposlab.com", "support": "support@aiposlab.com"};
+window.CARTE_CONTACT = {"phone": "(236) 512-9046", "tel": "+12365129046", "sales": "sales@aiposlab.com", "support": "support@aiposlab.com"};
